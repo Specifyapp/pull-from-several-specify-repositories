@@ -1,12 +1,9 @@
 const publicPath = './output';
-const fontFormats = ['woff', 'woff2'];
-const fontsFolderName = 'fonts';
-const vectorsFolderName = 'vectors';
 
 const colorRules = [
   {
-    name: 'Design Tokens / Colors',
-    path: `${publicPath}/styles/colors.css`,
+    name: 'Light Theme / Colors',
+    path: `${publicPath}/styles/colors/light-theme.css`,
     filter: {
       types: ['color'],
     },
@@ -27,79 +24,24 @@ const colorRules = [
   },
 ];
 
-const textStyleRules = [
+const gradientRules = [
   {
-    name: 'Design Tokens / Text Styles',
-    path: `${publicPath}/styles/text-styles.css`,
+    name: 'Light Theme / Gradients',
+    path: `${publicPath}/styles/gradients/light-theme.css`,
     filter: {
-      types: ['textStyle'],
+      types: ['gradient'],
     },
     parsers: [
       {
-        name: 'to-css-text-style',
+        name: 'sort-by',
         options: {
-          exclude: ['color', 'text-indent', 'vertical-align', 'text-align'],
-          relativeLineHeight: true,
-          genericFamily: 'serif',
+          keys: ['name'],
         },
       },
-    ],
-  },
-];
-
-const fontRules = [
-  {
-    name: 'Design Tokens / Import font files in CSS',
-    path: `${publicPath}/styles/fonts.css`,
-    filter: {
-      types: ['font'],
-    },
-    parsers: [
       {
-        name: 'to-css-font-import',
+        name: 'to-css-custom-properties',
         options: {
-          formats: fontFormats,
-          fontsPath: `../${fontsFolderName}`,
-        },
-      },
-    ],
-  },
-  {
-    name: 'Design Tokens / Import font files',
-    path: `${publicPath}/${fontsFolderName}`,
-    filter: {
-      types: ['font'],
-    },
-    parsers: [
-      {
-        name: 'convert-font',
-        options: {
-          formats: fontFormats,
-        },
-      },
-    ],
-  },
-];
-
-const vectorRules = [
-  {
-    name: 'Design Tokens / Vectors',
-    path: `${publicPath}/${vectorsFolderName}`,
-    filter: {
-      types: ['vector'],
-    },
-    parsers: [
-      {
-        'name': 'kebabcasify',
-      },
-      {
-        name: 'svgo',
-        options: {
-          svgo: {
-            js2svg: {
-              pretty: true,
-            },
-          },
+          formatName: 'kebabCase',
         },
       },
     ],
@@ -113,5 +55,5 @@ module.exports = {
   // Find more about how to target a Specify repository at: https://specifyapp.com/developers/api#heading-parameters
   repository: '@acme-inc/Light-Theme',
   personalAccessToken: '84db71c10be61e267a03c5881dd347e14ae2111aff92433d9cce06a688eb198d',
-  rules: [...colorRules, ...textStyleRules, ...fontRules, ...vectorRules],
+  rules: [...colorRules, ...gradientRules],
 };

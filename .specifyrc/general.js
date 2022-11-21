@@ -3,12 +3,12 @@ const fontFormats = ['woff', 'woff2'];
 const fontsFolderName = 'fonts';
 const vectorsFolderName = 'vectors';
 
-const colorRules = [
+const measurementRules = [
   {
-    name: 'Design Tokens / Colors',
-    path: `${publicPath}/styles/colors.css`,
+    name: 'Design Tokens / Measurements',
+    path: `${publicPath}/styles/measurements.css`,
     filter: {
-      types: ['color'],
+      types: ['measurement'],
     },
     parsers: [
       {
@@ -113,5 +113,5 @@ module.exports = {
   // Find more about how to target a Specify repository at: https://specifyapp.com/developers/api#heading-parameters
   repository: '@acme-inc/General',
   personalAccessToken: '84db71c10be61e267a03c5881dd347e14ae2111aff92433d9cce06a688eb198d',
-  rules: [...colorRules, ...textStyleRules, ...fontRules, ...vectorRules],
+  rules: [...measurementRules, ...textStyleRules, ...fontRules, ...vectorRules],
 };
