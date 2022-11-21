@@ -10,17 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Install Specify CLI
-      run: npm install -g @specifyapp/cli
+      run: npm install -g @specifyapp/cli; ls -a
     - name: Pull design data from SPecify
       run: npm run pull-tokens
-    - uses: peterjgrainger/action-create-branch@v2.2.0
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - uses: EndBug/add-and-commit@v9 # You can change this to use a specific version.
       with:
-        branch: 'specify'
-    - name: Commit Generated Platform Deliverables
-      id: "auto-commit-action"
-      uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        commit_message: Update design tokens
-        branch: specify
+        new_branch: 'specify'
+
+
+
+    
