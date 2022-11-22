@@ -53,6 +53,5 @@ const gradientRules = [
  */
 module.exports = {
   // Find more about how to target a Specify repository at: https://specifyapp.com/developers/api#heading-parameters
-  repository: '@acme-inc/Light-Theme',
   rules: [...colorRules, ...gradientRules],
 };
