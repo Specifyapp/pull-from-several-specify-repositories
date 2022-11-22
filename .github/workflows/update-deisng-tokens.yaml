@@ -1,7 +1,9 @@
-name: Generate Design Tokens (Final)
+name: Update Design Tokens
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron:  "0 */4 * * *"
 
 jobs:
   update-dep:
