@@ -1,0 +1,27 @@
+:root {
+  /* COLOR */
+  --base-black: rgb(255, 255, 255);
+  --base-white: rgb(31, 32, 35);
+  --danger-base: rgb(221, 72, 64);
+  --danger-dark: rgb(227, 105, 99);
+  --danger-light: rgb(183, 64, 58);
+  --danger-lighter: rgb(60, 38, 39);
+  --informative-base: rgb(96, 168, 250);
+  --informative-lighter: rgb(41, 52, 67);
+  --neutral-100: rgb(49, 50, 53);
+  --neutral-200: rgb(68, 71, 75);
+  --neutral-300: rgb(92, 96, 102);
+  --neutral-400: rgb(120, 126, 135);
+  --neutral-50: rgb(31, 32, 35);
+  --neutral-500: rgb(174, 178, 183);
+  --neutral-600: rgb(244, 245, 245);
+  --primary-base: rgb(98, 77, 227);
+  --primary-dark: rgb(154, 144, 223);
+  --primary-light: rgb(84, 67, 188);
+  --primary-lighter: rgb(54, 42, 121);
+  --success-base: rgb(125, 216, 121);
+  --success-lighter: rgb(45, 60, 48);
+  --warning-base: rgb(255, 158, 41);
+  --warning-light: rgb(105, 82, 58);
+  --warning-lighter: rgb(65, 51, 36);
+}
