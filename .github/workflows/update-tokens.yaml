@@ -19,9 +19,9 @@ jobs:
       with:
         ref: specify
     - name: Install Specify CLI
-      run: npm install -g @specifyapp/cli;
+      run: git branch -a; git branch --show-current; npm install -g @specifyapp/cli;
     - name: Pull design data from Specify
-      run: npm run pull-tokens
+      run: git branch --show-current; npm run pull-tokens
     - uses: EndBug/add-and-commit@v9
 
     
