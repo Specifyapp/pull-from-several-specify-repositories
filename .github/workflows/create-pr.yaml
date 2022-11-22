@@ -1,4 +1,4 @@
-name: Generate Design Tokens
+name: PR Generate Design Tokens
 
 on:
   workflow_dispatch:
@@ -12,9 +12,9 @@ jobs:
         with:
           node-version: '18.x'
       - name: Install Specify CLI
-      run: npm install -g @specifyapp/cli;
+        run: npm install -g @specifyapp/cli;
       - name: Pull design data from Specify
-      run: npm run pull-tokens
+        run: npm run pull-tokens
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
