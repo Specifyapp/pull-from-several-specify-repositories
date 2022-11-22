@@ -10,14 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: peterjgrainger/action-create-branch@v2.2.0
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        branch: 'specify'
-    - uses: actions/checkout@v3
-      with:
-        ref: specify
     - name: Install Specify CLI
       run: git branch -a; git branch --show-current; npm install -g @specifyapp/cli;
     - name: Pull design data from Specify
@@ -26,5 +18,5 @@ jobs:
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v4
       with:
-        branch: main
+        branch: specify
     
