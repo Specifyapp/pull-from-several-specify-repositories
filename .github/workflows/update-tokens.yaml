@@ -22,12 +22,6 @@ jobs:
       run: npm install -g @specifyapp/cli;
     - name: Pull design data from Specify
       run: npm run pull-tokens
-    - uses: EndBug/add-and-commit@v9 # You can change this to use a specific version.
-      with:
-        new_branch: specify
-    - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v4
-      with:
-        branch: main
+    - uses: EndBug/add-and-commit@v9
 
     
