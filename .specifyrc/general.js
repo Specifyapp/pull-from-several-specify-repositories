@@ -111,6 +111,5 @@ const vectorRules = [
  */
 module.exports = {
   // Find more about how to target a Specify repository at: https://specifyapp.com/developers/api#heading-parameters
-  repository: '@acme-inc/General',
   rules: [...measurementRules, ...textStyleRules, ...fontRules, ...vectorRules],
 };
