@@ -33,14 +33,14 @@ jobs:
           commit-message: Update design tokens
           title: 'Update design tokens'
           body: >
-            The design tokens and assets contained in this PR come from your [Specify](https://www.specifyapp.com) repositories set in your GitHub Action.
-            
-            Useful resources:
+            The design tokens and assets contained in this PR come from your [Specify](https://www.specifyapp.com) repositories set in your GitHub Action.\
+            \
+            Useful resources:\
             - ℹ️ [Documentation](https://specifyapp.com/developers)
             - 🙋 [Help Center](help.specifyapp.com)
             - ⚙️ [Parsers](https://github.com/Specifyapp/parsers/)
             - 👥 [Join our Discord community](https://discord.com/invite/vMkDk4CbG4)
-
+            \
             If you need further assistance feel free to reach out at: [louis@specifyapp.com](mailto:louis@specifyapp.com).
           branch: specify
           labels: Design Tokens
