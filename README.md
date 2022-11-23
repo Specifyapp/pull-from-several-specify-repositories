@@ -18,7 +18,7 @@ Please make sure you have:
 2. A Specify Personal Access Token
 
 ### How to pull design tokens from Specify
-1. Set a new repository secret called `SPECIFY_TOKEN` in your GitHub repository: Settings > Secrects > Actions containing your Specify Personal Access Token
+1. Set a new repository secret called `SPECIFY_TOKEN` containing your Specify Personal Access Token in your GitHub repository: Settings > Secrets > Actions
 2. Change the Specify repositories called in the [GitHub Action](https://github.com/Specifyapp/monorepo-example/blob/main/.github/workflows/update-design-tokens.yaml#L17-L28)
 
 Don't forget to enable GitHub workflows in your GitHub repository.
