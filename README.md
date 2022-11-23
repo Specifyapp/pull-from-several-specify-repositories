@@ -1,7 +1,7 @@
 # How to pull design tokens from several Specify repositories in GitHub
 This example GitHub repository helps you pull design tokens from several Specify repositories.
 
-It contains a GitHub Action that automatically get from Specify potential updates. If your Specify and your GitHub repositoy differ, a new PR will be opened containing your updated design tokens.
+It contains a GitHub Action that automatically pulls design tokens from Specify. If your Specify and your GitHub repositoy differ, a new PR will be opened containing your updated design tokens.
 
 ## What is pulled from Specify
 Our GitHub Action is in the file [`update-design-tokens.yaml`](https://github.com/Specifyapp/monorepo-example/blob/main/.github/workflows/update-design-tokens.yaml).
