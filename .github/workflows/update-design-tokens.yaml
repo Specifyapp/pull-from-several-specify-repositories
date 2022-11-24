@@ -16,15 +16,15 @@ jobs:
         run: |
           specify pull \
             -r @acme-inc/General \
-            -C ./.specifyrc/general.js \
+            -C ./.specify/general.js \
             -p ${{ secrets.SPECIFY_TOKEN }};
           specify pull \
             -r @acme-inc/Light-Theme \
-            -C ./.specifyrc/light-theme.js \
+            -C ./.specify/light-theme.js \
             -p ${{ secrets.SPECIFY_TOKEN }};
           specify pull \
             -r @acme-inc/Dark-Theme \
-            -C ./.specifyrc/dark-theme.js \
+            -C ./.specify/dark-theme.js \
             -p ${{ secrets.SPECIFY_TOKEN }};
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
