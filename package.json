@@ -1,5 +1,5 @@
 {
   "scripts": {
-    "pull-tokens": "specify extract -C ./.specifyrc/general.js; specify pull -C ./.specifyrc/light-theme.js; specify extract -C ./.specifyrc/dark-theme.js;"
+    "pull-tokens": "specify pull -C ./.specifyrc/general.js; specify pull -C ./.specifyrc/light-theme.js; specify pull -C ./.specifyrc/dark-theme.js;"
   }
 }
