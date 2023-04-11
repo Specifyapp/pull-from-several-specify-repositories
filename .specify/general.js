@@ -106,10 +106,58 @@ const vectorRules = [
   },
 ];
 
+const depthRules = [
+  {
+    name: 'Design Tokens / Z-index',
+    path: `${publicPath}/styles/z-index.css`,
+    filter: {
+      types: ['depth'],
+    },
+    parsers: [
+      {
+        name: 'sort-by',
+        options: {
+          keys: ['name'],
+        },
+      },
+      {
+        name: 'to-css-custom-properties',
+        options: {
+          formatName: 'kebabCase',
+        },
+      },
+    ],
+  },
+];
+
+const durationRules = [
+  {
+    name: 'Design Tokens / Durations',
+    path: `${publicPath}/styles/durations.css`,
+    filter: {
+      types: ['duration'],
+    },
+    parsers: [
+      {
+        name: 'sort-by',
+        options: {
+          keys: ['name'],
+        },
+      },
+      {
+        name: 'to-css-custom-properties',
+        options: {
+          formatName: 'kebabCase',
+        },
+      },
+    ],
+  },
+];
+
 /*
  * Finally exports the configuration
  */
 module.exports = {
   // Find more about how to target a Specify repository at: https://specifyapp.com/developers/api#heading-parameters
-  rules: [...measurementRules, ...textStyleRules, ...fontRules, ...vectorRules],
+  rules: [...measurementRules, ...textStyleRules, ...fontRules, ...vectorRules, ...depthRules, ...durationRules],
 };
