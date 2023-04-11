@@ -48,10 +48,58 @@ const gradientRules = [
   },
 ];
 
+const shadowRules = [
+  {
+    name: 'Light Theme / Shadow',
+    path: `${publicPath}/styles/shadows/light-theme.css`,
+    filter: {
+      types: ['shadow'],
+    },
+    parsers: [
+      {
+        name: 'sort-by',
+        options: {
+          keys: ['name'],
+        },
+      },
+      {
+        name: 'to-css-custom-properties',
+        options: {
+          formatName: 'kebabCase',
+        },
+      },
+    ],
+  },
+];
+
+const borderRules = [
+  {
+    name: 'Dark Theme / Border',
+    path: `${publicPath}/styles/borders/dark-theme.css`,
+    filter: {
+      types: ['border'],
+    },
+    parsers: [
+      {
+        name: 'sort-by',
+        options: {
+          keys: ['name'],
+        },
+      },
+      {
+        name: 'to-css-custom-properties',
+        options: {
+          formatName: 'kebabCase',
+        },
+      },
+    ],
+  },
+];
+
 /*
- * Finally exports the configuration
+ * Finally, export the configuration
  */
 module.exports = {
-  // Find more about how to target a Specify repository at: https://specifyapp.com/developers/api#heading-parameters
-  rules: [...colorRules, ...gradientRules],
+  // Find more about how to target a Specify repository at: https://docs.specifyapp.com/concepts/configuration#rules
+  rules: [...colorRules, ...gradientRules, ...shadowRules, ...borderRules],
 };
