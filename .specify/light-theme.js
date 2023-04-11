@@ -18,6 +18,9 @@ const colorRules = [
         name: 'to-css-custom-properties',
         options: {
           formatName: 'kebabCase',
+          formatConfig: {
+            selector: ":root[data-theme='light']"
+          }
         },
       },
     ],
@@ -42,6 +45,9 @@ const gradientRules = [
         name: 'to-css-custom-properties',
         options: {
           formatName: 'kebabCase',
+          formatConfig: {
+            selector: ":root[data-theme='light']"
+          }
         },
       },
     ],
@@ -66,6 +72,9 @@ const shadowRules = [
         name: 'to-css-custom-properties',
         options: {
           formatName: 'kebabCase',
+          formatConfig: {
+            selector: ":root[data-theme='light']"
+          }
         },
       },
     ],
@@ -90,6 +99,9 @@ const borderRules = [
         name: 'to-css-custom-properties',
         options: {
           formatName: 'kebabCase',
+          formatConfig: {
+            selector: ":root[data-theme='light']"
+          }
         },
       },
     ],
